@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book</title>
+    <style type="text/css">
+    .space {
+    padding: 20px;
+    background: #e5e5e5;
+    border: 2px solid #E81E25;
+    }
+    </style>
+</head>
+<body>
+        <div class="create_container">
+            <form action="{% url 'add-book' %}" method="POST">
+                <input class="create_input" type="text" placeholder="Напишите заголовок" name="book_text"/>
+                <input class="create_input" type="text" placeholder="Напишите подзаголовок" name="book.subtitle"/>
+                <input class="create_input" type="text" placeholder="Напишите описание" name="book.description"/>
+                <input class="create_input" type="text" placeholder="Напишите стоимость" name="book.price"/>
+                <input class="create_input" type="text" placeholder="Напишите жанр" name="book.genre"/>
+                <input class="create_input" type="text" placeholder="Напишите автора" name="book.authot"/>
+                <input class="create_input" type="text" placeholder="Год выпуска книги" name="book.year"/>
+                <input class="create_input" type="text" placeholder="Добавление книги на сайт" name="book.created_at"/>
+                <button id="create_button">Добавить</button>
+            </form>
+        </div>
+ 
+</body>
+</html>
