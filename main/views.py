@@ -3,7 +3,7 @@ from .models import ToDo
 
 
 def homepage(request):
-    return render(request, "index.html")
+    return render(request, "index.html", "book.html")
 
 
 def test(request):

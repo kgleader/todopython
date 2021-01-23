@@ -15,13 +15,13 @@
 <body>
         <div class="create_container">
             <form action="{% url 'add-book' %}" method="POST">
-                <input class="create_input" type="text" placeholder="Напишите заголовок" name="book_text"/><br><br>
-                <input class="create_input" type="text" placeholder="Напишите подзаголовок" name="book.subtitle"/><br><br>
-                <input class="create_input" type="text" placeholder="Напишите описание" name="book.description"/><br><br>
-                <input class="create_input" type="text" placeholder="Напишите стоимость" name="book.price"/><br><br>
-                <input class="create_input" type="text" placeholder="Напишите жанр" name="book.genre"/><br><br>
-                <input class="create_input" type="text" placeholder="Напишите автора" name="book.authot"/><br><br>
-                <input class="create_input" type="text" placeholder="Год выпуска книги" name="book.year"/><br><br>
+                <input class="create_input" type="text" placeholder="Заголовок" name="book_text"/><br><br>
+                <input class="create_input" type="text" placeholder="Подзаголовок" name="book.subtitle"/><br><br>
+                <input class="create_input" type="text" placeholder="Описание" name="book.description"/><br><br>
+                <input class="create_input" type="text" placeholder="Стоимость" name="book.price"/><br><br>
+                <input class="create_input" type="text" placeholder="Жанр" name="book.genre"/><br><br>
+                <input class="create_input" type="text" placeholder="Автор" name="book.authot"/><br><br>
+                <input class="create_input" type="text" placeholder="Год выпуска" name="book.year"/><br><br>
                 <input class="create_input" type="text" placeholder="Добавление книги на сайт" name="book.created_at"/><br><br>
                 <button id="create_button">Добавить</button>
             </form>
