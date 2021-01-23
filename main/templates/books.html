@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
-    <div class='container'>
+    <div class='BookStore'>
         <a href="http://127.0.0.1:8000/book-add/" class="btn btn-secondary">Добавить книгу</a>
         {% for book in book_list %}
             <hr>
@@ -28,9 +28,10 @@
                     <a href="{% url 'delete-book' book.id %}" class="btn btn-danger">Удалить</a>
                     <a href="{% url 'favorite-book' book.id %}" class="btn btn-warning">Избранное</a>
                     <a href="{% url 'info-book' book.id %}" class="btn btn-info">Информация о книге</a>
+                    
                 </div>
             <br>
         {% endfor %}
-    </div> 
+    </div>
 </body>
 </html>

@@ -11,7 +11,7 @@ class ToDo(models.Model):
     class Meta:
         verbose_name = 'Задача'
         verbose_name_plural = 'Задачи'
-
+        
  class BookStore(models.Model):
     title = models.CharField(max_length=60, verbose_name='Заголовок')
     subtitle = models.CharField(max_length=50, verbose_name='Подзаголовок')
