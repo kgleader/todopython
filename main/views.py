@@ -32,8 +32,11 @@ def delete_todo(request, id):
 
 def mark_todo(request, id):
     todo = ToDo.objects.get(id=id)
-    todo.is_favorite =True
-    todo.save()
+    if todo.is_favorite:
+            todo.is_favorite = False
+    else:
+        toto.is_favorite =True
+        tot.save()
     return redirect(test)
 
 def close_todo(request, id):
@@ -41,6 +44,28 @@ def close_todo(request, id):
     todo.is_closed = not todo.is_closed
     todo.save()
     return redirect(test)
+
+def delete_book(request, id):
+    book = BookStore.objects.get(id=id)
+    book.delete()
+
+    return redirect(bookStore)
+
+def favorite_book(request, id):
+    book = BookStore.objects.get(id=id)
+    if book.is_favorite:
+        book.is_favorite =False
+    else:
+        book.is_favorite =True
+        book.save()
+        return redirect(bookStore)
+
+
+def book_info(request, id):
+    book = BookStore.objects.get(id=id)
+    return render(request, 'book-detail.html', {'book': book})
+
+
 
 
 
